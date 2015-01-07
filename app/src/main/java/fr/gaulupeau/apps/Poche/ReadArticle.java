@@ -58,7 +58,7 @@ public class ReadArticle extends BaseActionBarActivity {
 		}
 
 		Boolean hicontrast = false;
-		if (android.os.Build.MODEL != "NOOK") {
+		if (android.os.Build.MODEL.equals("NOOK")) {
 			hicontrast = true;
 		}
 
