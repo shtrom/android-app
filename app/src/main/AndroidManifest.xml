@@ -25,9 +25,24 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity android:name="fr.gaulupeau.apps.Poche.ReadArticle" />
-        <activity android:name="fr.gaulupeau.apps.Poche.ListArticles" />
-        <activity android:name="fr.gaulupeau.apps.Poche.Settings" />
+	<activity android:name="fr.gaulupeau.apps.Poche.Settings"
+	  android:parentActivityName="fr.gaulupeau.apps.Poche.Poche">
+	  <meta-data
+	    android:name="android.support.PARENT_ACTIVITY"
+	    android:value="fr.gaulupeau.apps.Poche.Poche" />
+	</activity>
+	<activity android:name="fr.gaulupeau.apps.Poche.ListArticles"
+	  android:parentActivityName="fr.gaulupeau.apps.Poche.Poche">
+	  <meta-data
+	    android:name="android.support.PARENT_ACTIVITY"
+	    android:value="fr.gaulupeau.apps.Poche.Poche" />
+	</activity>
+	<activity android:name="fr.gaulupeau.apps.Poche.ReadArticle"
+	  android:parentActivityName="fr.gaulupeau.apps.Poche.ListArticles">
+	  <meta-data
+	    android:name="android.support.PARENT_ACTIVITY"
+	    android:value="fr.gaulupeau.apps.Poche.ListArticles" />
+	</activity>
 
     </application>
 </manifest>
