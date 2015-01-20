@@ -9,7 +9,7 @@ android {
         minSdkVersion 7
         targetSdkVersion 21
         versionCode 10
-        versionName "1.7"
+        versionName "1.7+nook"
     }
     buildTypes {
         release {
