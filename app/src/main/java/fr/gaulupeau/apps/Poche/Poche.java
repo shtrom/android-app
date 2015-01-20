@@ -236,6 +236,13 @@ public class Poche extends Activity implements FeedUpdaterInterface {
         apiToken = settings.getString("APIToken", "");
     }
 
+    private void getDatabase() {
+	    if (database == null) {
+		    ArticlesSQLiteOpenHelper helper = new ArticlesSQLiteOpenHelper(this);
+		    database = helper.getReadableDatabase();
+	    }
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
