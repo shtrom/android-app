@@ -222,13 +222,6 @@ public class Poche extends Activity implements FeedUpdaterInterface {
         pref.edit().putInt("update_checker", versionCode).commit();
     }
 
-    private void getDatabase() {
-	    if (database == null) {
-		    ArticlesSQLiteOpenHelper helper = new ArticlesSQLiteOpenHelper(this);
-		    database = helper.getReadableDatabase();
-	    }
-    }
-
     private void getSettings() {
         settings = getSharedPreferences(PREFS_NAME, 0);
         pocheUrl = settings.getString("pocheUrl", "http://");
